@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/states', (req, res) => {
-  connection.query("SELECT * FROM states;", function (err, result, fields) {
+  connection.query("SELECT * FROM states", function (err, result, fields) {
     if (err) {
       res.statusCode = 500;
       res.send(err.sqlMessage);
